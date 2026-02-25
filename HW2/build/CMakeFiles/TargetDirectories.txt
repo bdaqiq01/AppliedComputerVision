@@ -1,0 +1,7 @@
+/home/acv9/Documents/HW2/build/CMakeFiles/sobel.dir
+/home/acv9/Documents/HW2/build/CMakeFiles/canny.dir
+/home/acv9/Documents/HW2/build/CMakeFiles/capture.dir
+/home/acv9/Documents/HW2/build/CMakeFiles/simple_capture.dir
+/home/acv9/Documents/HW2/build/CMakeFiles/super_capture.dir
+/home/acv9/Documents/HW2/build/CMakeFiles/edit_cache.dir
+/home/acv9/Documents/HW2/build/CMakeFiles/rebuild_cache.dir

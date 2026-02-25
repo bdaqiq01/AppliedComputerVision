@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/simple_capture.dir/simple_capture.c.o -o simple_capture 
