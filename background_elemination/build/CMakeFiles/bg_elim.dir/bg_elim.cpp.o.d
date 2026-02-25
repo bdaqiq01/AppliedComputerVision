@@ -1,6 +1,6 @@
 CMakeFiles/bg_elim.dir/bg_elim.cpp.o: \
- /home/acv9/Documents/HW3/bg_elim.cpp /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
+ /home/acv9/Documents/computer_vision/background_elemination/bg_elim.cpp \
+ /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \

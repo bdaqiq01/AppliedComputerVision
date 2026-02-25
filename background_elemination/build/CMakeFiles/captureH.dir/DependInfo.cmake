@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/acv9/Documents/HW3/capture_HU.cpp" "CMakeFiles/captureH.dir/capture_HU.cpp.o" "gcc" "CMakeFiles/captureH.dir/capture_HU.cpp.o.d"
+  "/home/acv9/Documents/computer_vision/background_elemination/capture_HU.cpp" "CMakeFiles/captureH.dir/capture_HU.cpp.o" "gcc" "CMakeFiles/captureH.dir/capture_HU.cpp.o.d"
   )
 
 # Targets to which this target links.

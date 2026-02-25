@@ -1,4 +1,4 @@
-# Install script for directory: /home/acv9/Documents/HW3
+# Install script for directory: /home/acv9/Documents/computer_vision/background_elemination
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/acv9/Documents/HW3/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/acv9/Documents/computer_vision/background_elemination/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

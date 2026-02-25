@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/acv9/Documents/HW3
+CMAKE_SOURCE_DIR = /home/acv9/Documents/computer_vision/background_elemination
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/acv9/Documents/HW3/build
+CMAKE_BINARY_DIR = /home/acv9/Documents/computer_vision/background_elemination/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/bg_elim.dir/clean
 CMakeFiles/captureH.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/captureH.dir/build.make CMakeFiles/captureH.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/captureH.dir/build.make CMakeFiles/captureH.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/HW3/build/CMakeFiles --progress-num=3,4 "Built target captureH"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=3,4 "Built target captureH"
 .PHONY : CMakeFiles/captureH.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/captureH.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/HW3/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/captureH.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/HW3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 0
 .PHONY : CMakeFiles/captureH.dir/rule
 
 # Convenience name for target.
@@ -111,14 +111,14 @@ CMakeFiles/captureH.dir/clean:
 CMakeFiles/hc.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hc.dir/build.make CMakeFiles/hc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hc.dir/build.make CMakeFiles/hc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/HW3/build/CMakeFiles --progress-num=5,6 "Built target hc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=5,6 "Built target hc"
 .PHONY : CMakeFiles/hc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/HW3/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/HW3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 0
 .PHONY : CMakeFiles/hc.dir/rule
 
 # Convenience name for target.
@@ -137,14 +137,14 @@ CMakeFiles/hc.dir/clean:
 CMakeFiles/bg_elim.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bg_elim.dir/build.make CMakeFiles/bg_elim.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bg_elim.dir/build.make CMakeFiles/bg_elim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/HW3/build/CMakeFiles --progress-num=1,2 "Built target bg_elim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=1,2 "Built target bg_elim"
 .PHONY : CMakeFiles/bg_elim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bg_elim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/HW3/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bg_elim.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/HW3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 0
 .PHONY : CMakeFiles/bg_elim.dir/rule
 
 # Convenience name for target.

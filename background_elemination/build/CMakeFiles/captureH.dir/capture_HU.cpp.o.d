@@ -1,6 +1,6 @@
 CMakeFiles/captureH.dir/capture_HU.cpp.o: \
- /home/acv9/Documents/HW3/capture_HU.cpp /usr/include/stdc-predef.h \
- /usr/include/unistd.h /usr/include/features.h \
+ /home/acv9/Documents/computer_vision/background_elemination/capture_HU.cpp \
+ /usr/include/stdc-predef.h /usr/include/unistd.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
  /usr/include/aarch64-linux-gnu/bits/timesize.h \

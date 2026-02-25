@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/acv9/Documents/HW3/bg_elim.cpp" "CMakeFiles/bg_elim.dir/bg_elim.cpp.o" "gcc" "CMakeFiles/bg_elim.dir/bg_elim.cpp.o.d"
+  "/home/acv9/Documents/computer_vision/background_elemination/bg_elim.cpp" "CMakeFiles/bg_elim.dir/bg_elim.cpp.o" "gcc" "CMakeFiles/bg_elim.dir/bg_elim.cpp.o.d"
   )
 
 # Targets to which this target links.
