@@ -155,6 +155,19 @@ bg_elim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bg_elim.dir/build.make CMakeFiles/bg_elim.dir/build
 .PHONY : bg_elim/fast
 
+#=============================================================================
+# Target rules for targets named conv_gray
+
+# Build rule for target.
+conv_gray: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 conv_gray
+.PHONY : conv_gray
+
+# fast build rule for target.
+conv_gray/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/build
+.PHONY : conv_gray/fast
+
 bg_elim.o: bg_elim.cpp.o
 .PHONY : bg_elim.o
 
@@ -203,6 +216,30 @@ capture_HU.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/captureH.dir/build.make CMakeFiles/captureH.dir/capture_HU.cpp.s
 .PHONY : capture_HU.cpp.s
 
+conv_gray.o: conv_gray.cpp.o
+.PHONY : conv_gray.o
+
+# target to build an object file
+conv_gray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/conv_gray.cpp.o
+.PHONY : conv_gray.cpp.o
+
+conv_gray.i: conv_gray.cpp.i
+.PHONY : conv_gray.i
+
+# target to preprocess a source file
+conv_gray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/conv_gray.cpp.i
+.PHONY : conv_gray.cpp.i
+
+conv_gray.s: conv_gray.cpp.s
+.PHONY : conv_gray.s
+
+# target to generate assembly for a file
+conv_gray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/conv_gray.cpp.s
+.PHONY : conv_gray.cpp.s
+
 houghCirc.o: houghCirc.cpp.o
 .PHONY : houghCirc.o
 
@@ -237,6 +274,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bg_elim"
 	@echo "... captureH"
+	@echo "... conv_gray"
 	@echo "... hc"
 	@echo "... bg_elim.o"
 	@echo "... bg_elim.i"
@@ -244,6 +282,9 @@ help:
 	@echo "... capture_HU.o"
 	@echo "... capture_HU.i"
 	@echo "... capture_HU.s"
+	@echo "... conv_gray.o"
+	@echo "... conv_gray.i"
+	@echo "... conv_gray.s"
 	@echo "... houghCirc.o"
 	@echo "... houghCirc.i"
 	@echo "... houghCirc.s"

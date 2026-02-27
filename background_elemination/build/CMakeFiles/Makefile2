@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/acv9/Documents/computer_vision/background_elemination/b
 all: CMakeFiles/captureH.dir/all
 all: CMakeFiles/hc.dir/all
 all: CMakeFiles/bg_elim.dir/all
+all: CMakeFiles/conv_gray.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ preinstall:
 clean: CMakeFiles/captureH.dir/clean
 clean: CMakeFiles/hc.dir/clean
 clean: CMakeFiles/bg_elim.dir/clean
+clean: CMakeFiles/conv_gray.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -111,7 +113,7 @@ CMakeFiles/captureH.dir/clean:
 CMakeFiles/hc.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hc.dir/build.make CMakeFiles/hc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hc.dir/build.make CMakeFiles/hc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=5,6 "Built target hc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=7,8 "Built target hc"
 .PHONY : CMakeFiles/hc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -155,6 +157,32 @@ bg_elim: CMakeFiles/bg_elim.dir/rule
 CMakeFiles/bg_elim.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bg_elim.dir/build.make CMakeFiles/bg_elim.dir/clean
 .PHONY : CMakeFiles/bg_elim.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/conv_gray.dir
+
+# All Build rule for target.
+CMakeFiles/conv_gray.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=5,6 "Built target conv_gray"
+.PHONY : CMakeFiles/conv_gray.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/conv_gray.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/conv_gray.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 0
+.PHONY : CMakeFiles/conv_gray.dir/rule
+
+# Convenience name for target.
+conv_gray: CMakeFiles/conv_gray.dir/rule
+.PHONY : conv_gray
+
+# clean rule for target.
+CMakeFiles/conv_gray.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/clean
+.PHONY : CMakeFiles/conv_gray.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
