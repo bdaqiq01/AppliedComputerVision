@@ -2,5 +2,6 @@
 /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles/hc.dir
 /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles/bg_elim.dir
 /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles/conv_gray.dir
+/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles/bottom_up.dir
 /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles/edit_cache.dir
 /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles/rebuild_cache.dir

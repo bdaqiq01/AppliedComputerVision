@@ -67,6 +67,7 @@ all: CMakeFiles/captureH.dir/all
 all: CMakeFiles/hc.dir/all
 all: CMakeFiles/bg_elim.dir/all
 all: CMakeFiles/conv_gray.dir/all
+all: CMakeFiles/bottom_up.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -78,6 +79,7 @@ clean: CMakeFiles/captureH.dir/clean
 clean: CMakeFiles/hc.dir/clean
 clean: CMakeFiles/bg_elim.dir/clean
 clean: CMakeFiles/conv_gray.dir/clean
+clean: CMakeFiles/bottom_up.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -87,7 +89,7 @@ clean: CMakeFiles/conv_gray.dir/clean
 CMakeFiles/captureH.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/captureH.dir/build.make CMakeFiles/captureH.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/captureH.dir/build.make CMakeFiles/captureH.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=3,4 "Built target captureH"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=5,6 "Built target captureH"
 .PHONY : CMakeFiles/captureH.dir/all
 
 # Build rule for subdir invocation for target.
@@ -113,7 +115,7 @@ CMakeFiles/captureH.dir/clean:
 CMakeFiles/hc.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hc.dir/build.make CMakeFiles/hc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hc.dir/build.make CMakeFiles/hc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=7,8 "Built target hc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=9,10 "Built target hc"
 .PHONY : CMakeFiles/hc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,7 +167,7 @@ CMakeFiles/bg_elim.dir/clean:
 CMakeFiles/conv_gray.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=5,6 "Built target conv_gray"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=7,8 "Built target conv_gray"
 .PHONY : CMakeFiles/conv_gray.dir/all
 
 # Build rule for subdir invocation for target.
@@ -183,6 +185,32 @@ conv_gray: CMakeFiles/conv_gray.dir/rule
 CMakeFiles/conv_gray.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/clean
 .PHONY : CMakeFiles/conv_gray.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/bottom_up.dir
+
+# All Build rule for target.
+CMakeFiles/bottom_up.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bottom_up.dir/build.make CMakeFiles/bottom_up.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bottom_up.dir/build.make CMakeFiles/bottom_up.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles --progress-num=3,4 "Built target bottom_up"
+.PHONY : CMakeFiles/bottom_up.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bottom_up.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bottom_up.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/background_elemination/build/CMakeFiles 0
+.PHONY : CMakeFiles/bottom_up.dir/rule
+
+# Convenience name for target.
+bottom_up: CMakeFiles/bottom_up.dir/rule
+.PHONY : bottom_up
+
+# clean rule for target.
+CMakeFiles/bottom_up.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bottom_up.dir/build.make CMakeFiles/bottom_up.dir/clean
+.PHONY : CMakeFiles/bottom_up.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -168,6 +168,19 @@ conv_gray/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/conv_gray.dir/build.make CMakeFiles/conv_gray.dir/build
 .PHONY : conv_gray/fast
 
+#=============================================================================
+# Target rules for targets named bottom_up
+
+# Build rule for target.
+bottom_up: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bottom_up
+.PHONY : bottom_up
+
+# fast build rule for target.
+bottom_up/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bottom_up.dir/build.make CMakeFiles/bottom_up.dir/build
+.PHONY : bottom_up/fast
+
 bg_elim.o: bg_elim.cpp.o
 .PHONY : bg_elim.o
 
@@ -191,6 +204,30 @@ bg_elim.s: bg_elim.cpp.s
 bg_elim.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bg_elim.dir/build.make CMakeFiles/bg_elim.dir/bg_elim.cpp.s
 .PHONY : bg_elim.cpp.s
+
+bottom_up.o: bottom_up.cpp.o
+.PHONY : bottom_up.o
+
+# target to build an object file
+bottom_up.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bottom_up.dir/build.make CMakeFiles/bottom_up.dir/bottom_up.cpp.o
+.PHONY : bottom_up.cpp.o
+
+bottom_up.i: bottom_up.cpp.i
+.PHONY : bottom_up.i
+
+# target to preprocess a source file
+bottom_up.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bottom_up.dir/build.make CMakeFiles/bottom_up.dir/bottom_up.cpp.i
+.PHONY : bottom_up.cpp.i
+
+bottom_up.s: bottom_up.cpp.s
+.PHONY : bottom_up.s
+
+# target to generate assembly for a file
+bottom_up.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bottom_up.dir/build.make CMakeFiles/bottom_up.dir/bottom_up.cpp.s
+.PHONY : bottom_up.cpp.s
 
 capture_HU.o: capture_HU.cpp.o
 .PHONY : capture_HU.o
@@ -273,12 +310,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bg_elim"
+	@echo "... bottom_up"
 	@echo "... captureH"
 	@echo "... conv_gray"
 	@echo "... hc"
 	@echo "... bg_elim.o"
 	@echo "... bg_elim.i"
 	@echo "... bg_elim.s"
+	@echo "... bottom_up.o"
+	@echo "... bottom_up.i"
+	@echo "... bottom_up.s"
 	@echo "... capture_HU.o"
 	@echo "... capture_HU.i"
 	@echo "... capture_HU.s"

@@ -53,4 +53,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/hc.dir/DependInfo.cmake"
   "CMakeFiles/bg_elim.dir/DependInfo.cmake"
   "CMakeFiles/conv_gray.dir/DependInfo.cmake"
+  "CMakeFiles/bottom_up.dir/DependInfo.cmake"
   )
