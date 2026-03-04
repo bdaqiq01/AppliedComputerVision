@@ -150,14 +150,14 @@ int main( int argc, char** argv )
 	
 
 		imshow("Original", mat_frame);
-					get<0>(x_min) = 0;
-			get<1>(x_min) = 1000;
-			get<0>(x_max) = 0;
-			get<1>(x_max) = 0;
-			get<0>(y_min) = 1000;
-			get<1>(y_min) = 0;
-			get<0>(y_max) = 0;
-			get<1>(y_max) = 0;
+				get<0>(x_min) = 0;
+		get<1>(x_min) = mat_frame.cols;
+		get<0>(x_max) = 0;
+		get<1>(x_max) = 0;
+		get<0>(y_min) = mat_frame.rows;
+		get<1>(y_min) = 0;
+		get<0>(y_max) = 0;
+		get<1>(y_max) = 0;
 
 		
 		for (int rows = 0; rows < mat_frame.rows; rows++)
@@ -218,7 +218,7 @@ int main( int argc, char** argv )
 		for (int y = get<0>(y_min); y <= get<0>(y_max); y++)
 		{
 		
-			out_pntr[y * mat_frame.cols + get<1>(center)] = 150;
+			output.data()[y * mat_frame.cols + get<1>(center)] = 150;
 		}
 	 
 	 
