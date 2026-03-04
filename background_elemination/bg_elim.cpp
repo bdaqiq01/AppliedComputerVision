@@ -21,8 +21,8 @@ char difftext[20];
 void histG(const Mat& channel, const string& wind_name)
 {
 
-	int bintNum = 256;
-	float range[] = {0, 256};
+	int bintNum = 300;
+	float range[] = {0, 300};
 	const float* histRange = {range};
 
 	bool uniform = true;
@@ -36,6 +36,7 @@ void histG(const Mat& channel, const string& wind_name)
 	int bin_w = cvRound((double)hist_w / bintNum); 
 	Mat histImage(hist_h, hist_w, CV_8UC1, Scalar(0)); 
 	// Normalize histogram to fit in the image height 
+	hist.at<float>(0) = 0;
 	cv::normalize(hist, hist, 0, histImage.rows, NORM_MINMAX, -1, Mat()); 
 	// Draw each bin as a vertical line 
 	for(int i = 1; i < bintNum; i++) 
@@ -129,7 +130,7 @@ int main( int argc, char** argv )
 		//green_diffsum = (unsigned int)cv::sum(green_diff)[0]; // single channel sum
 	//	red_diffsum = (unsigned int)cv::sum(red_diff)[0]; // single channel sum
 
-		histG(colors[2], "Red Diff Histogram");
+		histG(red_diff, "Red Diff Histogram");
 		//histG(green_diff, "Red Diff Histogram");
 		
 		cv::threshold(red_diff,

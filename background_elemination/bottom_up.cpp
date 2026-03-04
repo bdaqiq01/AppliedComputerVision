@@ -51,15 +51,16 @@ int main( int argc, char** argv )
 	   std::cout << "Opened default camera interface" << std::endl;
     }
 
-	namedWindow("Original", WINDOW_NORMAL);
+//	namedWindow("Original", WINDOW_NORMAL);
 //	resizeWindow("Original", 640, 480);
 	namedWindow("Final Frame", WINDOW_NORMAL);
 //	resizeWindow("Final Frame", 640, 480);
 
-	if(!vcap.read(mat_frame)) 
+	if(!vcap.read(mat_frame) || mat_frame.empty()) 
 	{
 		std::cout << "No frame" << std::endl;
-		cv::waitKey();
+		//cv::waitKey();
+		return -1;
 	}
 
 	
@@ -139,7 +140,7 @@ int main( int argc, char** argv )
 	// Show both windows simultaneously
 //	cv::imshow("Final Frame", final_frame); 
 
-
+	int frame_count = 0;
     while(1)
     {
 		if(!vcap.read(mat_frame)) 
@@ -149,7 +150,7 @@ int main( int argc, char** argv )
 		}
 	
 
-		imshow("Original", mat_frame);
+//		imshow("Original", mat_frame);
 				get<0>(x_min) = 0;
 		get<1>(x_min) = mat_frame.cols;
 		get<0>(x_max) = 0;
@@ -230,6 +231,9 @@ int main( int argc, char** argv )
 
 		cv::imshow("Final Frame", final_frame);		
 
+		char filename[64];
+		snprintf(filename, sizeof(filename), "../frames/frame_%04d.png", frame_count++);
+		cv::imwrite(filename, final_frame);
 	    char c = waitKey(33); // take this out or reduce
 	    if( c == 'q' ) break;
 	    
