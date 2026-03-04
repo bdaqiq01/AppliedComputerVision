@@ -30,7 +30,7 @@ int main( int argc, char** argv )
 	tuple<int, int> x_min(0, 1000), x_max(0, 0), y_min(1000, 0), y_max(0, 0), center(0, 0);
 	
 
-    uint8_t spot_threshold = 50;
+    uint8_t spot_threshold = 60;
     
     
     VideoCapture vcap;
@@ -65,8 +65,18 @@ int main( int argc, char** argv )
 	
 	output.resize(mat_frame.rows * mat_frame.cols);
 
+		get<0>(x_min) = 0;
+		get<1>(x_min) = 1000;
+		get<0>(x_max) = 0;
+		get<1>(x_max) = 0;
+		get<0>(y_min) = 1000;
+		get<1>(y_min) = 0;
+		get<0>(y_max) = 0;
+		get<1>(y_max) = 0;
+
 	for (int rows = 0; rows < mat_frame.rows; rows++)
 	{
+
 		row3 = mat_frame.ptr<Vec3b>(rows);
 		out_pntr = output.data() + rows * mat_frame.cols;
 
@@ -75,23 +85,23 @@ int main( int argc, char** argv )
 			intensity = (row3[cols][0] + row3[cols][1] + row3[cols][2]) / 3;
 			if (intensity > spot_threshold)
 			{
-				//out_pntr[cols] =  255;
+				out_pntr[cols] =  255;
 				if (cols < get<1>(x_min))
 				{
 					//get<0>x_min = rows;
 					get<1>(x_min) = cols;
 				}
-				else if (cols > get<1>(x_max))
+				if (cols > get<1>(x_max))
 				{
 					//get<0>x_max = rows;
 					get<1>(x_max) = cols;
 				}
-				else if (rows < get<0>(y_min))
+				if (rows < get<0>(y_min))
 				{
 					get<0>(y_min) = rows;
 					//get<1>y_min = cols;
 				}
-				else if (rows > get<0>(y_max))
+				if (rows > get<0>(y_max))
 				{
 					get<0>(y_max) = rows;
 					//get<1>y_max = cols;
@@ -110,8 +120,9 @@ int main( int argc, char** argv )
 
 	// Add crosshairs
 	out_pntr = output.data() + get<0>(center) * mat_frame.cols;
-	for (int i = 0; i < 20; i++)
+	//for (int i = 0; i < 20; i++)
 	{
+	
 		out_pntr[get<1>(center)] = 0;
 	}
 	
@@ -139,6 +150,15 @@ int main( int argc, char** argv )
 	
 
 		imshow("Original", mat_frame);
+					get<0>(x_min) = 0;
+			get<1>(x_min) = 1000;
+			get<0>(x_max) = 0;
+			get<1>(x_max) = 0;
+			get<0>(y_min) = 1000;
+			get<1>(y_min) = 0;
+			get<0>(y_max) = 0;
+			get<1>(y_max) = 0;
+
 		
 		for (int rows = 0; rows < mat_frame.rows; rows++)
 		{
@@ -146,12 +166,62 @@ int main( int argc, char** argv )
 			out_pntr = output.data() + rows * mat_frame.cols;
 
 			for (int cols = 0; cols < mat_frame.cols; cols++)
-			{
-				intensity = (row3[cols][0] + row3[cols][1] + row3[cols][2]) / 3;;
-				out_pntr[cols] =  (intensity > spot_threshold) ? 255 : 0;
-			}
+					{
+						intensity = (row3[cols][0] + row3[cols][1] + row3[cols][2]) / 3;
+						if (intensity > spot_threshold)
+						{
+							out_pntr[cols] =  255;
+							if (cols < get<1>(x_min))
+							{
+								//get<0>x_min = rows;
+								get<1>(x_min) = cols;
+							}
+							if (cols > get<1>(x_max))
+							{
+								//get<0>x_max = rows;
+								get<1>(x_max) = cols;
+							}
+							if (rows < get<0>(y_min))
+							{
+								get<0>(y_min) = rows;
+								//get<1>y_min = cols;
+							}
+							if (rows > get<0>(y_max))
+							{
+								get<0>(y_max) = rows;
+								//get<1>y_max = cols;
+							}
+						}
+						else
+						{
+							out_pntr[cols] = 0;
+						}
+
+					}
 		}
- 
+
+		//get<1>(center) = cx
+		//get<0>(center) = cy
+		
+
+		get<1>(center) = (get<1>(x_min) + get<1>(x_max)) / 2;
+		get<0>(center) = (get<0>(y_min) + get<0>(y_max)) / 2;
+
+		// Add crosshairs
+		out_pntr = output.data() + get<0>(center) * mat_frame.cols;
+		for (int x = get<1>(x_min); x <= get<1>(x_max); x++)
+		{
+		
+			out_pntr[x] = 150;
+		}
+
+		for (int y = get<0>(y_min); y <= get<0>(y_max); y++)
+		{
+		
+			out_pntr[y * mat_frame.cols + get<1>(center)] = 150;
+		}
+	 
+	 
 
 		// Convert back to Mat
 		final_frame = Mat(mat_frame.rows, mat_frame.cols, CV_8UC1, output.data());
