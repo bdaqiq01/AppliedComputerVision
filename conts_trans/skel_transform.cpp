@@ -44,23 +44,14 @@ static Mat computeSkeleton(const Mat& binary) //Takes a while and black, the whi
 
 int main(int argc, char** argv)
 {
-    int manual_thresh = -1;
-    if (argc >= 2)
-        manual_thresh = atoi(argv[1]);
-
     VideoCapture cam0(0);
     if (!cam0.isOpened())
     {
         cerr << "Error: Cannot open camera device 0." << endl;
         return SYSTEM_ERROR;
     }
-    cam0.set(CAP_PROP_FRAME_WIDTH,  HRES); //camera resolution width
-    cam0.set(CAP_PROP_FRAME_HEIGHT, VRES); //camera resolution height
-
-    if (manual_thresh >= 0)
-        cout << "Manual threshold: " << manual_thresh << " (inverted)" << endl;
-    else
-        cout << "Using Otsu auto-threshold (inverted)" << endl;
+    cam0.set(CAP_PROP_FRAME_WIDTH,  HRES);
+    cam0.set(CAP_PROP_FRAME_HEIGHT, VRES);
 
 
     system("mkdir -p frames");
@@ -85,18 +76,20 @@ int main(int argc, char** argv)
             break;
         }
 
-        Mat gray, binary, mfblur;
-        cvtColor(frame, gray, COLOR_BGR2GRAY); //convert the frame to grayscale
+        Mat hsv, skin_mask, mfblur;
+        cvtColor(frame, hsv, COLOR_BGR2HSV);
 
-        int thresh_type = THRESH_BINARY_INV; //above threshold is black, below threshold is white for skeleten implementation
-        int t = (manual_thresh >= 0) ? manual_thresh : 0; //threshold value
-        if (manual_thresh < 0) //if manual threshold is below 0, use Otsu thresholding
-            thresh_type |= THRESH_OTSU; //if manual threshold is not provided, use Otsu thresholding
- 
-        threshold(gray, binary, t, 255, thresh_type); //apply thresholding
-        medianBlur(binary, mfblur, 3); //apply median blur
+        Mat lower_mask, upper_mask;
+        inRange(hsv, Scalar(0,  30, 60), Scalar(20, 180, 255), lower_mask);
+        inRange(hsv, Scalar(160, 30, 60), Scalar(180, 180, 255), upper_mask);
+        bitwise_or(lower_mask, upper_mask, skin_mask);
 
-        Mat skel = computeSkeleton(mfblur); //compute the skeleton
+        Mat close_elem = getStructuringElement(MORPH_ELLIPSE, Size(7, 7));
+        morphologyEx(skin_mask, skin_mask, MORPH_CLOSE, close_elem);
+
+        medianBlur(skin_mask, mfblur, 7);
+
+        Mat skel = computeSkeleton(mfblur);
 
         imshow("Original", frame);
         imshow("Skeleton", skel);
