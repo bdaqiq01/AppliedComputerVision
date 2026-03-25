@@ -41,7 +41,7 @@ int main( int argc, char** argv )
     //open the video stream and make sure it's opened
     // "0" is the default video device which is normally the built-in webcam
     //if(!vcap.open(0))
-    if(!vcap.open("output.mp4")) 
+    if(!vcap.open("../output.mp4")) 
     {
         std::cout << "Error opening video or file" << std::endl;
         return -1;
@@ -140,6 +140,8 @@ int main( int argc, char** argv )
 //	cv::imshow("Final Frame", final_frame); 
 
 
+    int frame_count = 0;
+
     while(1)
     {
 		if(!vcap.read(mat_frame)) 
@@ -228,7 +230,12 @@ int main( int argc, char** argv )
 
 //		crosshair.write(final_frame);
 
-		cv::imshow("Final Frame", final_frame);		
+		cv::imshow("Final Frame", final_frame);
+
+		// Save processed frame to frames/ folder
+		char filename[64];
+		snprintf(filename, sizeof(filename), "../frames/frame_%04d.png", frame_count++);
+		cv::imwrite(filename, final_frame);
 
 	    char c = waitKey(33); // take this out or reduce
 	    if( c == 'q' ) break;

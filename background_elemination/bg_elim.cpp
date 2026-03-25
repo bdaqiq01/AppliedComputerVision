@@ -22,7 +22,7 @@ void histG(const Mat& channel, const string& wind_name)
 {
 
 	int bintNum = 256;
-	float range[] = {0, 256};
+	float range[] = {0, 256};   // covers all 0-255 diff values
 	const float* histRange = {range};
 
 	bool uniform = true;
@@ -31,10 +31,12 @@ void histG(const Mat& channel, const string& wind_name)
 	Mat hist;
 	cv::calcHist(&channel, 1, 0, Mat(), hist, 1, &bintNum, &histRange, uniform, accumulate); 
 	// create image to draw histogram on 
-	int hist_w = 512; 
+	int hist_w = 1024;  // 1024 / 256 bins = 4px per bin, all bins clearly visible
 	int hist_h = 400; 
 	int bin_w = cvRound((double)hist_w / bintNum); 
 	Mat histImage(hist_h, hist_w, CV_8UC1, Scalar(0)); 
+	// Zero out bin 0 (unchanged/black pixels) so it doesn't dominate normalization
+	hist.at<float>(0) = 0;
 	// Normalize histogram to fit in the image height 
 	cv::normalize(hist, hist, 0, histImage.rows, NORM_MINMAX, -1, Mat()); 
 	// Draw each bin as a vertical line 
@@ -87,7 +89,7 @@ int main( int argc, char** argv )
 	//namedWindow("Green Diff Histogram", WINDOW_NORMAL); 
 	resizeWindow("Original", 640, 480);
 	resizeWindow("Color Diff", 640, 480);
-	resizeWindow("Red Diff Histogram", 512, 400);
+	resizeWindow("Red Diff Histogram", 1024, 400);
 
     while(!vcap.read(mat_frame)) {
 	std::cout << "No frame" << std::endl;
@@ -129,7 +131,7 @@ int main( int argc, char** argv )
 		//green_diffsum = (unsigned int)cv::sum(green_diff)[0]; // single channel sum
 	//	red_diffsum = (unsigned int)cv::sum(red_diff)[0]; // single channel sum
 
-		histG(colors[2], "Red Diff Histogram");
+		histG(red_diff, "Red Diff Histogram");
 		//histG(green_diff, "Red Diff Histogram");
 		
 		cv::threshold(red_diff,

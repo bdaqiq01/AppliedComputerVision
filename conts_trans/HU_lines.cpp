@@ -81,7 +81,7 @@ int main(int argc, char** argv)
 
     while(1)
     {
-        vcap.read(frame); // read a frame of the content
+        if(!vcap.read(frame) || frame.empty()) break; // end of video or read failure
         Canny(frame, canny_frame, 50, 200, 3);
 
         cvtColor(canny_frame, cdst, COLOR_GRAY2BGR);     
