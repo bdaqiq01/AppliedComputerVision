@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/acv9/Documents/computer_vision/conts_trans/build
 
 # The main recursive "all" target.
 all: CMakeFiles/HU.dir/all
+all: CMakeFiles/skel_transform.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/HU.dir/clean
+clean: CMakeFiles/skel_transform.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ HU: CMakeFiles/HU.dir/rule
 CMakeFiles/HU.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HU.dir/build.make CMakeFiles/HU.dir/clean
 .PHONY : CMakeFiles/HU.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/skel_transform.dir
+
+# All Build rule for target.
+CMakeFiles/skel_transform.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/skel_transform.dir/build.make CMakeFiles/skel_transform.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/skel_transform.dir/build.make CMakeFiles/skel_transform.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles --progress-num=3,4 "Built target skel_transform"
+.PHONY : CMakeFiles/skel_transform.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/skel_transform.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/skel_transform.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles 0
+.PHONY : CMakeFiles/skel_transform.dir/rule
+
+# Convenience name for target.
+skel_transform: CMakeFiles/skel_transform.dir/rule
+.PHONY : skel_transform
+
+# clean rule for target.
+CMakeFiles/skel_transform.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/skel_transform.dir/build.make CMakeFiles/skel_transform.dir/clean
+.PHONY : CMakeFiles/skel_transform.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
