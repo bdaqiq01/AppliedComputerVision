@@ -1,3 +1,0 @@
-/home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles/HU.dir
-/home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles/edit_cache.dir
-/home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles/rebuild_cache.dir
