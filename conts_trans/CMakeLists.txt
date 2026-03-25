@@ -13,8 +13,10 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 # Add the executable (Ensure `main.cpp` is listed here)
 add_executable(HU HU_lines.cpp)
 add_executable(skel_transform skel_transform.cpp)
+add_executable(people_detec people_detec.cpp)
 
 # Link OpenCV libraries
 target_link_libraries(HU ${OpenCV_LIBS})
 target_link_libraries(skel_transform ${OpenCV_LIBS})
+target_link_libraries(people_detec ${OpenCV_LIBS})
 
