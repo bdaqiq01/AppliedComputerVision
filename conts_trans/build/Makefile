@@ -142,6 +142,19 @@ skel_transform/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/skel_transform.dir/build.make CMakeFiles/skel_transform.dir/build
 .PHONY : skel_transform/fast
 
+#=============================================================================
+# Target rules for targets named people_detec
+
+# Build rule for target.
+people_detec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 people_detec
+.PHONY : people_detec
+
+# fast build rule for target.
+people_detec/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/people_detec.dir/build.make CMakeFiles/people_detec.dir/build
+.PHONY : people_detec/fast
+
 HU_lines.o: HU_lines.cpp.o
 .PHONY : HU_lines.o
 
@@ -165,6 +178,30 @@ HU_lines.s: HU_lines.cpp.s
 HU_lines.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HU.dir/build.make CMakeFiles/HU.dir/HU_lines.cpp.s
 .PHONY : HU_lines.cpp.s
+
+people_detec.o: people_detec.cpp.o
+.PHONY : people_detec.o
+
+# target to build an object file
+people_detec.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/people_detec.dir/build.make CMakeFiles/people_detec.dir/people_detec.cpp.o
+.PHONY : people_detec.cpp.o
+
+people_detec.i: people_detec.cpp.i
+.PHONY : people_detec.i
+
+# target to preprocess a source file
+people_detec.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/people_detec.dir/build.make CMakeFiles/people_detec.dir/people_detec.cpp.i
+.PHONY : people_detec.cpp.i
+
+people_detec.s: people_detec.cpp.s
+.PHONY : people_detec.s
+
+# target to generate assembly for a file
+people_detec.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/people_detec.dir/build.make CMakeFiles/people_detec.dir/people_detec.cpp.s
+.PHONY : people_detec.cpp.s
 
 skel_transform.o: skel_transform.cpp.o
 .PHONY : skel_transform.o
@@ -199,10 +236,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HU"
+	@echo "... people_detec"
 	@echo "... skel_transform"
 	@echo "... HU_lines.o"
 	@echo "... HU_lines.i"
 	@echo "... HU_lines.s"
+	@echo "... people_detec.o"
+	@echo "... people_detec.i"
+	@echo "... people_detec.s"
 	@echo "... skel_transform.o"
 	@echo "... skel_transform.i"
 	@echo "... skel_transform.s"

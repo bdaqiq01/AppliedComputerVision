@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/acv9/Documents/computer_vision/conts_trans/build
 # The main recursive "all" target.
 all: CMakeFiles/HU.dir/all
 all: CMakeFiles/skel_transform.dir/all
+all: CMakeFiles/people_detec.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +75,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/HU.dir/clean
 clean: CMakeFiles/skel_transform.dir/clean
+clean: CMakeFiles/people_detec.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -109,7 +111,7 @@ CMakeFiles/HU.dir/clean:
 CMakeFiles/skel_transform.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/skel_transform.dir/build.make CMakeFiles/skel_transform.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/skel_transform.dir/build.make CMakeFiles/skel_transform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles --progress-num=3,4 "Built target skel_transform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles --progress-num=5,6 "Built target skel_transform"
 .PHONY : CMakeFiles/skel_transform.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,6 +129,32 @@ skel_transform: CMakeFiles/skel_transform.dir/rule
 CMakeFiles/skel_transform.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/skel_transform.dir/build.make CMakeFiles/skel_transform.dir/clean
 .PHONY : CMakeFiles/skel_transform.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/people_detec.dir
+
+# All Build rule for target.
+CMakeFiles/people_detec.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/people_detec.dir/build.make CMakeFiles/people_detec.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/people_detec.dir/build.make CMakeFiles/people_detec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles --progress-num=3,4 "Built target people_detec"
+.PHONY : CMakeFiles/people_detec.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/people_detec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/people_detec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acv9/Documents/computer_vision/conts_trans/build/CMakeFiles 0
+.PHONY : CMakeFiles/people_detec.dir/rule
+
+# Convenience name for target.
+people_detec: CMakeFiles/people_detec.dir/rule
+.PHONY : people_detec
+
+# clean rule for target.
+CMakeFiles/people_detec.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/people_detec.dir/build.make CMakeFiles/people_detec.dir/clean
+.PHONY : CMakeFiles/people_detec.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
